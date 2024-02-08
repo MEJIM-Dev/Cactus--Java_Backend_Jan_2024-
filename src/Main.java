@@ -1,3 +1,6 @@
+import oop.Car;
+import oop.Laptop;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,15 +15,60 @@ public class Main {
     byte sI =  127; //-128 to 127 (negative 2^[8-1]) to (positive {2^[8-1] minus 1})
     short sh = 31522;
 
+
+    //Memory
+    //address | value
+    //adfags  | 1213 (primitive)
+    //ase     | Pool.Integer.1
+    //fdg     | Pool.Integer.2
+    //               Pool
+    //                ||
+    //                \/
+    //              Integer 1. 123 2. 56
+    //              String 1. "sdertyuytd" 2. "rtsd"
     public static void main(String[] args) {
 //        increment();
 //        decrement();
 //        decisionConstructs();
 //        loops();
-        int n = 10;
-        for (int i = 0; i < n; i++) {
-            System.out.print(fibonacci(i) + " ");
-        }
+//        int n = 10;
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(fibonacci(i) + " ");
+//        }
+//        useCar();
+//        objectVersionOne();
+//        isASeeVehicle(Car);
+//        switchStatement(10);
+//        fee("school");
+        objectsVersionTwo();
+    }
+
+    private static void objectVersionOne() {
+        String as = new String("ASas");//"ASas";
+        as.charAt(2);
+        String fghjk = "sadassa";
+        fghjk.charAt(2);
+        Laptop lenovo = new Laptop();
+        Laptop mac = new Laptop();
+
+        int dxfghj = 6779;
+        Integer ase = 234;
+
+        char dfg = 'h';
+        Character ghj = 'h';
+
+        lenovo.keyboardBacklit=false;
+        lenovo.ram=8;
+        lenovo.screenSize=14;
+
+        mac.screenSize=13;
+        mac.ram=16;
+        mac.keyboardBacklit=true;
+
+        Laptop macPro = new Laptop();
+        macPro.powerOn();
+        lenovo.powerOn();
+        mac.powerOn();
     }
 
     static int fibonacci(int n) {
@@ -144,5 +192,43 @@ public class Main {
         System.out.println("Loop has ended");
     }
 
+    public static void useCar(){
+        Car car = new Car();
+//        String as = "asasas";
+//        int trfdf= 324567;
+        car.tires = 0;
+        System.out.println(car);
 
+        isASeeVehicle(car);
+//        String value = "fdghjk";
+//        System.out.println(car);
+    }
+
+    public static boolean isASeeVehicle(Car car){
+        if(car.tires==0){
+            System.out.println("it is a sea vehicle");
+            return true;
+        }
+        return false;
+    }
+
+    public static void fee(String name){
+        System.out.println(name);
+    }
+
+    public static void objectsVersionTwo(){
+        Laptop laptop = new Laptop();
+        Laptop laptop2 = new Laptop();
+//        Laptop.staticMethod();
+//        laptop2.regularMethod();
+        laptop.screenSize = 10;
+        laptop.ram = 8;
+        laptop2.keyboardBacklit=true;
+        laptop.listSpecifications();
+        laptop2.listSpecifications();
+
+        System.out.println(laptop);
+        System.out.println(laptop2);
+//        System.out.println(laptop.keyboardBacklit);
+    }
 }
