@@ -40,7 +40,8 @@ public class Main {
 //        isASeeVehicle(Car);
 //        switchStatement(10);
 //        fee("school");
-        objectsVersionTwo();
+//        objectsVersionTwo();
+          createCarObject();
     }
 
     private static void objectVersionOne() {
@@ -230,5 +231,13 @@ public class Main {
         System.out.println(laptop);
         System.out.println(laptop2);
 //        System.out.println(laptop.keyboardBacklit);
+    }
+
+    public static void createCarObject(){
+        Car carWithTires = new Car(true,4);
+
+        System.out.println(carWithTires);
+
+        //System.out.println(car);
     }
 }
