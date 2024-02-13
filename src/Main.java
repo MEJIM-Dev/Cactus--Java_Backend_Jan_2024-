@@ -40,7 +40,8 @@ public class Main {
 //        isASeeVehicle(Car);
 //        switchStatement(10);
 //        fee("school");
-        objectsVersionTwo();
+//        objectsVersionTwo();
+          createCarObject();
     }
 
     private static void objectVersionOne() {
@@ -192,6 +193,7 @@ public class Main {
         System.out.println("Loop has ended");
     }
 
+/*
     public static void useCar(){
         Car car = new Car();
 //        String as = "asasas";
@@ -203,14 +205,15 @@ public class Main {
 //        String value = "fdghjk";
 //        System.out.println(car);
     }
+*/
 
-    public static boolean isASeeVehicle(Car car){
+    /*public static boolean isASeeVehicle(Car car){
         if(car.tires==0){
             System.out.println("it is a sea vehicle");
             return true;
         }
         return false;
-    }
+    }*/
 
     public static void fee(String name){
         System.out.println(name);
@@ -230,5 +233,17 @@ public class Main {
         System.out.println(laptop);
         System.out.println(laptop2);
 //        System.out.println(laptop.keyboardBacklit);
+    }
+
+    public static void createCarObject(){
+        Car carWithTires = new Car(true,4);
+
+        System.out.println(carWithTires + " Car 1");
+
+       carWithTires.setTires(10);
+
+        System.out.println(carWithTires.getTires()+" After Update");
+
+        //System.out.println(car);
     }
 }
