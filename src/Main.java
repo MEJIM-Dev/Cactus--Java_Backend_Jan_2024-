@@ -25,7 +25,8 @@ public class Main {
     //                ||
     //                \/
     //              Integer 1. 123 2. 56
-    //              String 1. "sdertyuytd" 2. "rtsd"
+    //              String i 1. "a"
+    //              String ii 1. "a" 2. "rtsd"
     public static void main(String[] args) {
 //        increment();
 //        decrement();
@@ -41,7 +42,8 @@ public class Main {
 //        switchStatement(10);
 //        fee("school");
 //        objectsVersionTwo();
-          createCarObject();
+//          createCarObject();
+        equalsTo();
     }
 
     private static void objectVersionOne() {
@@ -246,4 +248,64 @@ public class Main {
 
         //System.out.println(car);
     }
+
+    public static void casting(){
+        int i = 1027812912;
+        long j = 176528277618271621l;
+        long k = (long) i; //up casting
+        int l = (int) j; //down casting
+        short m = 123;
+        int n = (int) m;
+//        double and float
+        double o = 6556172.67;
+        float p = 6552.67f;
+        double q = (double) p;// up
+        float r = (float) o; //down
+        String w = "asas";
+        Object obj = (Object) w;
+        String s = "a";
+        System.out.println(s);
+        String t = s;
+        String v = (String) obj;
+        int a = (int) obj;
+        Object obj2 = a;
+        test2((Object) 1);
+    }
+
+    public static void test2 (Object arg){
+
+    }
+
+    public static void equalsTo(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter any alphabet");
+        String text = scanner.nextLine();
+        scanner.close();
+
+        String a = new String("a");
+        String b = "a";
+        String c = "a";
+
+        System.out.println("text==a "+text==a);
+        System.out.println("text==b "+text==b);
+        System.out.println("a==b "+a==b);
+        System.out.println("c==b "+c==b);
+        //Best way to truly check if an object matches another instance of the same type
+        System.out.println(text.equals(a));
+        Laptop laptop = new Laptop();
+        Laptop laptop1 = new Laptop();
+        System.out.println(laptop1+ " "+laptop);
+
+        System.out.println(laptop==laptop1);
+    }
+    // name : value
+    // text | String@gashjbasjd
+    // a    | String@gashjbaasfghajs == String@gashjbasjd
+    // b    | String@gashjbaashjqas
+    // c    | String@gashjbaashjqas
+
+    //Read up casting
+    //Read up equal method
+    //Attempt implementation of equal method for person and employee
+    //Read up inheritance
 }

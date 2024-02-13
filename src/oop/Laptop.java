@@ -35,12 +35,20 @@ public class Laptop {
         return "booting System";
     }
 
+//    @Override
+//    public String toString() {
+//        return "Laptop{" +
+//                "screenSize=" + screenSize +
+//                ", ram=" + ram +
+//                ", keyboardBacklit=" + keyboardBacklit +
+//                '}';
+//    }
+
     @Override
-    public String toString() {
-        return "Laptop{" +
-                "screenSize=" + screenSize +
-                ", ram=" + ram +
-                ", keyboardBacklit=" + keyboardBacklit +
-                '}';
+    public boolean equals(Object o){
+        if(false) {// if they are not the same instance
+            return false;
+        }
+        return true;
     }
 }
