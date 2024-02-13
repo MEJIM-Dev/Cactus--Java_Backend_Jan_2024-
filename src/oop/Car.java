@@ -2,6 +2,14 @@ package oop;
 
 public class Car {
 
+    private boolean automatic;
+    private int tires;
+    private Boolean active;
+    private Boolean deactivated;
+
+    public Boolean activated;
+    public Boolean enabled;
+
     public Car(){};
     public Car(boolean automatic, int tires){
         this.automatic = automatic;
@@ -32,14 +40,6 @@ public class Car {
         this.deactivated = deactivated;
         this.enabled = enabled;
     }
-
-    private boolean automatic;
-    private int tires;
-    private Boolean active;
-    private Boolean deactivated;
-
-    public Boolean activated;
-    public Boolean enabled;
 
     public int getTires(){
         return this.tires;
