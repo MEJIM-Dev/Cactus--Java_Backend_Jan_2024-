@@ -11,8 +11,6 @@ public class Car {
         this.active = true;
         this.enabled = true;
         this.deactivated = false;
-
-        System.out.println(automatic);
     }
 
     public Car(Boolean active, Boolean enabled, Boolean deactivated){
@@ -35,13 +33,21 @@ public class Car {
         this.enabled = enabled;
     }
 
-    public boolean automatic;
-    public int tires;
-    public Boolean active;
-    public Boolean deactivated;
+    private boolean automatic;
+    private int tires;
+    private Boolean active;
+    private Boolean deactivated;
 
     public Boolean activated;
     public Boolean enabled;
+
+    public int getTires(){
+        return this.tires;
+    }
+
+    public void setTires(int tires){
+        this.tires = tires;
+    }
 
     @Override
     public String toString() {
