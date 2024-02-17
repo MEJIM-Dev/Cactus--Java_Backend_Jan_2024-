@@ -1,3 +1,6 @@
+import inheritance.Animal;
+import inheritance.Cat;
+import inheritance.Dog;
 import oop.Car;
 import oop.Laptop;
 
@@ -43,7 +46,8 @@ public class Main {
 //        fee("school");
 //        objectsVersionTwo();
 //          createCarObject();
-        equalsTo();
+//        equalsTo();
+        classicalInheritance();
     }
 
     private static void objectVersionOne() {
@@ -269,7 +273,7 @@ public class Main {
         String v = (String) obj;
         int a = (int) obj;
         Object obj2 = a;
-        test2((Object) 1);
+        test2(1);
     }
 
     public static void test2 (Object arg){
@@ -277,26 +281,49 @@ public class Main {
     }
 
     public static void equalsTo(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter any alphabet");
-        String text = scanner.nextLine();
-        scanner.close();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter any alphabet");
+//        String text = scanner.nextLine();
+//        scanner.close();
 
         String a = new String("a");
         String b = "a";
         String c = "a";
 
-        System.out.println("text==a "+text==a);
-        System.out.println("text==b "+text==b);
-        System.out.println("a==b "+a==b);
-        System.out.println("c==b "+c==b);
+//        System.out.println("text==a "+ text==a);
+//        System.out.println("text==b "+ text==b);
+//        System.out.println("a==b "+ a==b);
+//        System.out.println("c==b "+ c==b);
         //Best way to truly check if an object matches another instance of the same type
-        System.out.println(text.equals(a));
+//        System.out.println(text.equals(a));
+//        System.out.println(text.equals(1));
         Laptop laptop = new Laptop();
         Laptop laptop1 = new Laptop();
+        laptop1.keyboardBacklit = true;
+        Laptop laptop3 = new Laptop();
+//        laptop3.setScreenSize(5);
         System.out.println(laptop1+ " "+laptop);
 
-        System.out.println(laptop==laptop1);
+//        System.out.println(laptop==laptop1);
+        System.out.println(laptop.equals(laptop1));
+        System.out.println(laptop.equals(laptop));
+        System.out.println(laptop.equals(laptop3));
+        System.out.println(laptop3.equals("asas"));
+    }
+
+    public static void classicalInheritance(){
+        Animal animal = new Animal();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        animal.move();
+        dog.move();
+        cat.move();
+        System.out.println(animal);
+        System.out.println(dog);
+        System.out.println(cat);
+        Car car = new Car();
+        car.drive("lagos");
+        Animal a = new Cat();
     }
     // name : value
     // text | String@gashjbasjd
