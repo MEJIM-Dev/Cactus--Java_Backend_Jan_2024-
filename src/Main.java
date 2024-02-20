@@ -1,3 +1,4 @@
+import dataStructures.DataStructures;
 import inheritance.Animal;
 import inheritance.Cat;
 import inheritance.Dog;
@@ -47,7 +48,11 @@ public class Main {
 //        objectsVersionTwo();
 //          createCarObject();
 //        equalsTo();
-        classicalInheritance();
+   //     classicalInheritance();
+
+        DataStructures ds = new DataStructures();
+
+        ds.doStuff();
     }
 
     private static void objectVersionOne() {
