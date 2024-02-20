@@ -1,3 +1,4 @@
+import assignment.ShoppingList;
 import dataStructures.DataStructures;
 import inheritance.Animal;
 import inheritance.Cat;
@@ -50,9 +51,10 @@ public class Main {
 //        equalsTo();
    //     classicalInheritance();
 
-        DataStructures ds = new DataStructures();
+//        DataStructures ds = new DataStructures();
 
-        ds.doStuff();
+//        ds.doStuff();
+        shoppingCartSolution();
     }
 
     private static void objectVersionOne() {
@@ -330,6 +332,18 @@ public class Main {
         car.drive("lagos");
         Animal a = new Cat();
     }
+
+    public static void shoppingCartSolution(){
+        ShoppingList items = new ShoppingList();
+        items.displayItems();
+        items.removeItem();
+        items.displayItems();
+        items.addItem();
+        items.displayItems();
+        items.removeItem();
+        items.displayItems();
+    }
+
     // name : value
     // text | String@gashjbasjd
     // a    | String@gashjbaasfghajs == String@gashjbasjd
