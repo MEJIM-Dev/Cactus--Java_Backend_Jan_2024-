@@ -6,6 +6,12 @@ import inheritance.Dog;
 import oop.Car;
 import oop.Laptop;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -54,7 +60,11 @@ public class Main {
 //        DataStructures ds = new DataStructures();
 
 //        ds.doStuff();
-        shoppingCartSolution();
+//        shoppingCartSolution();
+//        uncheckedException();
+        checkedExceptionHandlingMethod();
+//        stackOverFlowError();
+        dsV2();
     }
 
     private static void objectVersionOne() {
@@ -342,6 +352,70 @@ public class Main {
         items.displayItems();
         items.removeItem();
         items.displayItems();
+    }
+
+    public static void uncheckedException(){
+        int[] numbers = {7,4,2};
+        try {
+            int fourthItem = numbers[2];
+            System.out.println(fourthItem);
+        } catch (Exception exception){
+            System.out.println("Something went wrong");
+        }
+    }
+
+    public static void checkedExceptionSignatureMethod() throws FileNotFoundException {
+        BufferedReader br = new BufferedReader(new FileReader("Main.java"));
+    }
+
+    public static void checkedExceptionHandlingMethod() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("/Users/michaelejim/Documents/NotificationService/csv/default_sms_provider.csv"));
+            String line = br.readLine();
+            System.out.println(line);
+            br.close();
+            int[] asa = {1,5};
+            System.out.println(asa[1]);
+            Object a = new Laptop();
+            Laptop b = (Laptop) a;
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+            System.out.println("Couldn't read the file");
+        } catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+            System.out.println("Invalid position used");
+        } catch (ClassCastException e){
+            e.printStackTrace();
+            System.out.println("Failed to cast");
+        } catch (Exception e){
+            System.out.println("Something Went wrong");
+        } finally {
+            System.out.println("Finally got here");
+        }
+        System.out.println("Doing it without finally BS");
+    }
+
+    public static void stackOverFlowError(){
+        stackOne();
+    }
+
+    public static void stackOne(){
+        stackTwo();
+    }
+
+    public static void stackTwo(){
+       stackOne();
+    }
+
+    public static void dsV2(){
+        ArrayList<String> user = new ArrayList<>(Arrays.asList("emeka","john","20","male"));
+        user.get(0);
+        HashMap<String,Object> myUser = new HashMap();
+        myUser.put("firstname","emeka");
+        myUser.put("lastname","john");
+        myUser.put("age",20);
+        myUser.put("sex","male");
+        System.out.println(myUser.get("sex"));
     }
 
     // name : value
