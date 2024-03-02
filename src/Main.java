@@ -1,3 +1,5 @@
+import LMS.Book;
+import LMS.Library;
 import assignment.ShoppingList;
 import dataStructures.DataStructures;
 import inheritance.Animal;
@@ -39,6 +41,49 @@ public class Main {
     //              String i 1. "a"
     //              String ii 1. "a" 2. "rtsd"
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Library library = new Library();
+
+        while(true){
+            System.out.println("Welcome to LMS");
+
+            System.out.println("1. Add a Book");
+            System.out.println("2. Remove a Book");
+            System.out.println("3. List All Books");
+            System.out.println("4. Check Book Availability");
+            System.out.println("5. Exit");
+            System.out.print("Select an option: ");
+
+            int option = scanner.nextInt();
+
+            switch(option){
+                case 1:
+                    System.out.println("Enter the title");
+                    String title = scanner.nextLine();
+
+                   // Book book = new Book();
+                    break;
+
+                case 2:
+                    // Remove a book
+                    break;
+                case 3:
+                    //List all books
+                    break;
+                case 4:
+                    //Check Book Availability
+                    break;
+                case 5:
+                    //Exit
+                    System.exit(0);
+                    break;
+
+            }
+
+        }
+
 //        increment();
 //        decrement();
 //        decisionConstructs();
@@ -62,9 +107,9 @@ public class Main {
 //        ds.doStuff();
 //        shoppingCartSolution();
 //        uncheckedException();
-        checkedExceptionHandlingMethod();
+        //checkedExceptionHandlingMethod();
 //        stackOverFlowError();
-        dsV2();
+        //dsV2();
     }
 
     private static void objectVersionOne() {
