@@ -18,7 +18,6 @@ public class LevelUp {
 
         Step 4: return the count
 
-
         //Output: Count of players
 
          */
